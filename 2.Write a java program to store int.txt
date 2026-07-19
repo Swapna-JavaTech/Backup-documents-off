@@ -1,0 +1,5 @@
+2.Write a java program to store integer values in an array/array list
+13,5,7,44,77,23,56,89
+convert them to binary and store in another array
+find the number with most 1's
+and sort them based on number of 1's after converting in to binary

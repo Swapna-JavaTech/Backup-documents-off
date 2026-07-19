@@ -1,0 +1,8 @@
+1. Write a program to store a paragraph in the text file
+find least repeated vowel and character from the given string,
+Input Text:
+This is a sample paragraph for testing. It contains multiple vowels and characters.
+Least Repeated Vowel: o
+Least Repeated Character: g
+ divide above string in to words and check if it contains more than 3 or equal vowels
+Enter the Character to replace all vowels : *

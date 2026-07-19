@@ -1,0 +1,18 @@
+Write a Program to read a collection of words as input in to arraylist/hashmap or array and
+sort the characters of each word in the given sentence
+find the count of vowels in each word
+Sample Input:
+===========
+openai 
+creates 
+ai 
+models
+Sample Output:
+=============
+Processed and sorted words:
+aeiopn => 4
+aeimn => 3
+aerstc => 2
+delmos => 2
+
+sort the words after sorting the character based on number of vowels in each word

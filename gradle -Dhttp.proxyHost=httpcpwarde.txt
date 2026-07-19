@@ -1,0 +1,11 @@
+gradle -Dhttp.proxyHost=http://cpwarden.snshub.org -Dhttp.proxyPort=8080 -Dhttp.proxyUser=swapnar -Dhttp.proxyPassword=Bangaram$157279
+
+
+
+angular_rest_integration
+
+
+
+
+
+

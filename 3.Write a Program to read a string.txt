@@ -1,0 +1,12 @@
+3.Write a Program to read a string as input and
+split them in to words
+sort the characters of each word in the given sentence
+and sort those words ?
+Sample Input:
+openai creates ai models
+Sample Output:
+Processed and sorted words:
+aeimn
+aeiopn
+aerstc
+delmos

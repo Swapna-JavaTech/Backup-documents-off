@@ -1,0 +1,35 @@
+Bangaram$1572
+
+SwapnaR1572
+
+APIKey = 56HrRCAr44gPshBQY33W5IglM
+API Key Secret = VufMRdGPIDWHZv5U9YmSNAq6nTOHP0Lup7DpQkU3DIZ09ZN6OT
+
+Barer Token = 
+AAAAAAAAAAAAAAAAAAAAACqm3QEAAAAAnDLMV01EZoPrC9m6brb4X30WF1U%3DzWMbKyDsBMgyZOJ6oZs22oUs9zO9jV2WcIDBlwjAExFnNWIELi
+
+Access Token =
+1952358134619738112-F5P6N5DkKo6AmyJUazPtMhkFFIROPg
+
+Access Token Secret = 
+S1graBJJRLQWOQobEVtfnQAv8Zn3JLt9cXQVAcHvVlkRQ
+
+ 
+
+
+
+
+stormtweetdb
+
+
+
+ws://localhost:8081/
+
+
+
+SERVER : INMISLDIVPSAG01 (192.168.21.196) 
+ 
+appusr / W3lc0me@#APP012025
+ 
+software installed location : /opt/GTOS/
+ 

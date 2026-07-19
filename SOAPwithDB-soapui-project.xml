@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5585b673-a6a3-4626-bff0-46c588d05a67" activeEnvironment="Default" name="SOAPwithDB" soapui-version="5.8.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="0c0b4cea-2561-4f72-8a8a-ef33d336c6d7" wsaVersion="NONE" name="ProductPortSoap11" type="wsdl" bindingName="{http://example.com/product}ProductPortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/ws/products.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/ws/products.wsdl"><con:part><con:url>http://localhost:8080/ws/products.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://example.com/product" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://example.com/soap" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://example.com/product">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://example.com/soap" xmlns:tns="http://example.com/soap" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getProductRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getProductResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="product" type="tns:product"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateProductRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="xs:string"/>
+            <xs:element name="price" type="xs:double"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateProductResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="status" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="product">
+        <xs:sequence>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="description" type="xs:string"/>
+          <xs:element name="price" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateProductRequest">
+    <wsdl:part element="sch:CreateProductRequest" name="CreateProductRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductResponse">
+    <wsdl:part element="sch:getProductResponse" name="getProductResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateProductResponse">
+    <wsdl:part element="sch:CreateProductResponse" name="CreateProductResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProductRequest">
+    <wsdl:part element="sch:getProductRequest" name="getProductRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProductPort">
+    <wsdl:operation name="CreateProduct">
+      <wsdl:input message="tns:CreateProductRequest" name="CreateProductRequest"></wsdl:input>
+      <wsdl:output message="tns:CreateProductResponse" name="CreateProductResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProduct">
+      <wsdl:input message="tns:getProductRequest" name="getProductRequest"></wsdl:input>
+      <wsdl:output message="tns:getProductResponse" name="getProductResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProductPortSoap11" type="tns:ProductPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreateProduct">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="CreateProductRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CreateProductResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProduct">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="getProductRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProductResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductPortService">
+    <wsdl:port binding="tns:ProductPortSoap11" name="ProductPortSoap11">
+      <soap:address location="http://localhost:8080/ws"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/ws</con:endpoint></con:endpoints><con:operation id="ae687512-caa5-4240-aae0-d6d876eb6c38" isOneWay="false" action="" name="CreateProduct" bindingOperationName="CreateProduct" type="Request-Response" outputName="CreateProductResponse" inputName="CreateProductRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="43bb26ee-057c-450b-8b8e-b7304271e832" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://example.com/soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:CreateProductRequest>\r
+         <soap:id>101</soap:id>\r
+         <soap:name>Pen</soap:name>\r
+         <soap:description>Stationary</soap:description>\r
+         <soap:price>35</soap:price>\r
+      </soap:CreateProductRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/product/ProductPort/CreateProductRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6c077e0b-47cf-44e2-ba74-891ad174f63e" isOneWay="false" action="" name="getProduct" bindingOperationName="getProduct" type="Request-Response" outputName="getProductResponse" inputName="getProductRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d5417f60-2fb3-4026-9ba5-74d9a24405bf" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://example.com/soap">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getProductRequest>\r
+         <soap:id>1
+         </soap:id>\r
+      </soap:getProductRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/product/ProductPort/getProductRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
